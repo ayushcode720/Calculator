@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <title>Calculator</title>
+    <link href="style.css" rel="stylesheet">
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#1e1e1e">
+
+</head>
+
+<body>
+
+    <div class="hole">
+
+        <input class="equationbox" type="text" onkeydown="lock(event);"
+            oninput="this.value = this.value.replace(/[a-zA-z=]/g, '');">
+
+        <div class="line1">
+            <button class="buttons" onclick="fun(`7`);">7</button>
+            <button class="buttons" onclick="fun(`8`);">8</button>
+            <button class="buttons" onclick="fun(`9`);">9</button>
+            <button class="color" onclick="checkoperator(`/`);">/</button>
+        </div>
+
+        <div class="line2">
+            <button class="buttons" onclick="fun(`4`);">4</button>
+            <button class="buttons" onclick="fun(`5`);">5</button>
+            <button class="buttons" onclick="fun(`6`);">6</button>
+            <button class="color" onclick="checkoperator(`*`);">x</button>
+        </div>
+
+        <div class="line3">
+            <button class="buttons" onclick="fun(`1`);">1</button>
+            <button class="buttons" onclick="fun(`2`);">2</button>
+            <button class="buttons" onclick="fun(`3`);">3</button>
+            <button class="color" onclick="checkoperator(`-`);">-</button>
+        </div>
+
+        <div class="line4">
+            <button class="buttons" onclick="checkoperator(`%`);">%</button>
+            <button class="buttons" onclick="fun(`0`);">0</button>
+            <button class="buttons" onclick="checkoperator(`.`);">.</button>
+            <button class="color" onclick="checkoperator(`+`);">+</button>
+        </div>
+
+        <div class="line5">
+            <button class="color" onclick="fun(`00`);">00</button>
+            <button class="color" onclick="delet();">AC</button>
+            <button class="color" onclick="onedelete();">C</button>
+            <button class="color" onclick="call();">=</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
